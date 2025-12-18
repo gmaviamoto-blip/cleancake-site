@@ -1,348 +1,203 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clean Cake - ПП Десерты и Кофе</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        
-        header {
-            background: white;
-            padding: 1rem 5%;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #FF9800;
-        }
-        
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-        
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-        }
-        
-        .hero {
-            background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%);
-            padding: 5rem 5%;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-        
-        .hero .highlight {
-            color: #FF9800;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: #666;
-        }
-        
-        .buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-        }
-        
-        .btn {
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 30px;
-            font-size: 1rem;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-        }
-        
-        .btn-primary {
-            background: #FF9800;
-            color: white;
-        }
-        
-        .btn-secondary {
-            background: white;
-            color: #333;
-            border: 2px solid #FF9800;
-        }
-        
-        section {
-            padding: 4rem 5%;
-        }
-        
-        h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        
-        .feature {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .feature h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #FF9800;
-        }
-        
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-        
-        .product {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .product-image {
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
-            display: flex;
-                        background-size: cover;
-            background-position: center;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 3rem;
-        }
-        
-        .product-info {
-            padding: 1.5rem;
-        }
-        
-        .product h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .tags {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .tag {
-            background: #E8F5E9;
-            color: #4CAF50;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-        }
-        
-        .nutrition {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-        }
-        
-        .price {
-            font-size: 1.5rem;
-            color: #FF9800;
-            font-weight: bold;
-        }
-        
-        footer {
-            background: #333;
-            color: white;
-            padding: 3rem 5%;
-            text-align: center;
-        }
-        
-        .contact-info {
-            margin-bottom: 2rem;
-        }
-        
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            nav ul {
-                gap: 1rem;
-                flex-wrap: wrap;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clean Cake - ПП Десерты и Кофе</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, Helvetica, sans-serif; line-height: 1.6; color: #333; background-color: #f5f1ed; }
+    header { background: white; padding: 1rem 5%; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; }
+    header nav { display: flex; justify-content: space-between; align-items: center; }
+    header .logo { font-size: 1.5rem; font-weight: bold; color: #c97a6e; }
+    header nav a { margin-left: 2rem; text-decoration: none; color: #333; }
+    header nav a:hover { color: #c97a6e; }
+    .hero { padding: 4rem 5%; display: flex; gap: 3rem; align-items: center; }
+    .hero-text { flex: 1; }
+    .hero-text h1 { font-size: 3rem; color: #1a1a1a; margin-bottom: 1rem; }
+    .hero-text p { font-size: 1rem; color: #666; margin-bottom: 2rem; }
+    .hero-image { flex: 1; }
+    .hero-image img { width: 100%; border-radius: 15px; }
+    .badge { display: inline-block; background: #c97a6e; color: white; padding: 0.5rem 1.5rem; border-radius: 20px; margin-bottom: 1.5rem; }
+    .btn { display: inline-block; background: #c97a6e; color: white; padding: 0.8rem 2rem; border-radius: 5px; text-decoration: none; }
+    .features { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; padding: 3rem 5%; background: white; }
+    .feature { padding: 2rem; text-align: center; background: #f9f7f4; border-radius: 10px; }
+    .feature h3 { margin: 1rem 0 0.5rem; }
+    .products { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; padding: 2rem 5%; }
+    .product { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .product-image { width: 100%; height: 200px; background: #e8e1d9; }
+    .product-image img { width: 100%; height: 100%; object-fit: cover; }
+    .product-info { padding: 1.5rem; }
+    .product-title { font-weight: bold; margin-bottom: 0.5rem; }
+    .product-kcal { color: #c97a6e; font-weight: bold; font-size: 0.9rem; }
+    .product-price { font-size: 1.2rem; font-weight: bold; margin-top: 1rem; }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">☕ Кофе ПП</div>
-            <ul>
-                <li><a href="#">Главная</a></li>
-                <li><a href="#menu">Меню</a></li>
-                <li><a href="#delivery">Доставка</a></li>
-                <li><a href="#contacts">Контакты</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <div class="logo">☕ Clean Cake</div>
+      <div>
+        <a href="#">Главная</a>
+        <a href="#">Меню</a>
+        <a href="#">Доставка</a>
+        <a href="#">Контакты</a>
+      </div>
+    </nav>
+  </header>
 
-    <section class="hero">
-        <p>☕ Ежедневно с 08:00 до 22:00</p>
-        <h1>Вкусные ПП-десерты и кофе <span class="highlight">— с понятным составом и КБЖУ</span></h1>
-        <p>Берите после тренировки или к кофе: в каждой позиции — ингредиенты, подсластитель и КБЖУ.</p>
-        <div class="buttons">
-            <a href="#menu" class="btn btn-primary">🧘 Меню</a>
-            <a href="#menu" class="btn btn-secondary">📋 Каталог</a>
-        </div>
-    </section>
+  <section class="hero">
+    <div class="hero-text">
+      <div class="badge">Здоровое питание в Москве</div>
+      <h1>Вкусные ПП‑десерты и кофе — с понятным составом и КБЖУ</h1>
+      <p>Берите после тренировки или к кофе: в каждой позиции — ингредиенты, подсластитель и КБЖУ.</p>
+      <a href="#" class="btn">Меню</a>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500" alt="Десерты">
+    </div>
+  </section>
 
-    <section>
-        <h2>Почему выбирают нас</h2>
-        <p style="text-align: center; color: #666; margin-bottom: 3rem;">Делаем кофе и ПП-десерты так, чтобы было реально вкусно</p>
-        <div class="features">
-            <div class="feature">
-                <h3>⚖️ Точное КБЖУ</h3>
-                <p>В каждой карточке — калории, белки, жиры и углеводы на порцию.</p>
-            </div>
-            <div class="feature">
-                <h3>🍃 Понятный состав</h3>
-                <p>Показываем все ингредиенты, аллергены и подсластители.</p>
-            </div>
-            <div class="feature">
-                <h3>⚡ Быстрая сборка</h3>
-                <p>Десерты из холодильника — собираем заказ максимально быстро</p>
-            </div>
-            <div class="feature">
-                <h3>❤️ Очень вкусно</h3>
-                <p>ПП не значит невкусно — убедитесь сами!</p>
-            </div>
-        </div>
-    </section>
+  <section class="features">
+    <div class="feature">
+      <div style="font-size: 2.5rem;">✓</div>
+      <h3>Натуральные ингредиенты</h3>
+      <p>Только проверенные продукты без искусственных добавок</p>
+    </div>
+    <div class="feature">
+      <div style="font-size: 2.5rem;">📊</div>
+      <h3>КБЖУ на каждый десерт</h3>
+      <p>Полная информация о калориях, белках, жирах и углеводах</p>
+    </div>
+    <div class="feature">
+      <div style="font-size: 2.5rem;">🚚</div>
+      <h3>Быстрая доставка</h3>
+      <p>30-90 минут в пределах МКАД</p>
+    </div>
+    <div class="feature">
+      <div style="font-size: 2.5rem;">📦</div>
+      <h3>Только в наличии</h3>
+      <p>Показываем только доступные позиции</p>
+    </div>
+  </section>
 
-    <section id="menu">
-        <h2>Хиты продаж</h2>
-        <p style="text-align: center; color: #666; margin-bottom: 3rem;">Самые популярные позиции у наших гостей</p>
-        <div class="products">
-            <div class="product">
-                <div class="product-image">☕</div>
-                <div class="product-info">
-                    <div class="tags">
-                        <span class="tag">без лактозы</span>
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400');"></div>                    <h3>Капучино</h3>
-                    <div class="nutrition">
-                        <span>85 ккал</span>
-                        <span>Б 3</span>
-                        <span>Ж 3</span>
-                        <span>У 10</span>
-                    </div>
-                    <p style="margin-bottom: 1rem; font-size: 0.9rem;">Классический капучино на альтернативном молоке с бархатистой пенкой</p>
-                    <div class="price">250 ₽</div>
-                </div>
-            </div>
+  <h2 style="font-size: 2rem; text-align: center; margin: 3rem 0;">Популярные позиции</h2>
+  
+  <section class="products">
+    <div class="product">
+      <div class="product-image"><img src="https://images.unsplash.com/photo-1535920527894-b400b62fe660?w=400" alt="Черничный чизкейк"></div>
+      <div class="product-info">
+        <div class="product-title">Черничный чизкейк</div>
+        <div class="product-kcal">180 ккал</div>
+        <p>Нежный творожный десерт с черникой на овсяной основе</p>
+        <div class="product-price">350 ₽</div>
+      </div>
+    </div>
+    <div class="product">
+      <div class="product-image"><img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=400" alt="Шоколадный брауни"></div>
+      <div class="product-info">
+        <div class="product-title">Шоколадный брауни</div>
+        <div class="product-kcal">220 ккал</div>
+        <p>Влажный брауни из цельнозерновой муки с горьким шоколадом</p>
+        <div class="product-price">320 ₽</div>
+      </div>
+    </div>
+    <div class="product">
+      <div class="product-image"><img src="https://images.unsplash.com/photo-1577357346213-1a3b02ba2b83?w=400" alt="Ягодный тарт"></div>
+      <div class="product-info">
+        <div class="product-title">Ягодный тарт</div>
+        <div class="product-kcal">195 ккал</div>
+        <p>Хрустящее тесто с кремом из греческого йогурта и свежими ягодами</p>
+        <div class="product-price">380 ₽</div>
+      </div>
+    </div>
+    <div class="product">
+      <div class="product-image"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400" alt="Латте"></div>
+      <div class="product-info">
+        <div class="product-title">Латте с овсяным молоком</div>
+        <div class="product-kcal">110 ккал</div>
+        <p>Нежный латте на овсяном молоке без сахара</p>
+        <div class="product-price">240 ₽</div>
+      </div>
+    </div>
+  </section>
 
-            <div class="product">
-                <div class="product-image" style="background: linear-gradient(135deg, #90EE90 0%, #98FB98 100%);">🍵</div>
-                <div class="product-info">
-                    <div class="tags">
-                        <span class="tag">веган</span>
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1536013564559-6b88fef6aaa7?w=400');">🍵</div>                    </div>
-                    <h3>Матча латте</h3>
-                    <div class="nutrition">
-                        <span>95 ккал</span>
-                        <span>Б 2</span>
-                        <span>Ж 4</span>
-                        <span>У 12</span>
-                    </div>
-                    <p style="margin-bottom: 1rem; font-size: 0.9rem;">Японский чай матча с растительным молоком</p>
-                    <div class="price">290 ₽</div>
-                </div>
-            </div>
+  <section style="padding: 3rem 5%; background: white;">
+    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">О нас</h2>
+    <div style="display: flex; gap: 2rem; align-items: center;">
+      <div style="flex: 1;">
+        <p style="margin-bottom: 1rem; line-height: 1.8;"><strong>Делаем кофе и ПП‑десерты так, чтобы было реально вкусно.</strong></p>
+        <p style="margin-bottom: 1rem; line-height: 1.8;">Всегда называет состав, КБЖУ и подсластитель. Десерты продаём из рук в руки — поэтому собираем заказ быстро.</p>
+        <p style="line-height: 1.8;">Наши кондитеры работают только на натуральных ингредиентах — цельнозерновая мука, греческий йогурт, свежие фрукты и ягоды. Никаких искусственных добавок, только польза и вкус.</p>
+      </div>
+      <div style="flex: 1;">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500" alt="О нас" style="width: 100%; border-radius: 10px;">
+      </div>
+    </div>
+  </section>
 
-            <div class="product">
-                <div class="product-image" style="background: linear-gradient(135deg, #F5DEB3 0%, #FFE4B5 100%);">🍰</div>
-                <div class="product-info">
-                    <div class="tags">
-                        <span class="tag">высокобелковое</span>
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1524351199678-941a58a3df50?w=400');">🍰</div>                    </div>
-                    <h3>Протеиновый чизкейк</h3>
-                    <div class="nutrition">
-                        <span>185 ккал</span>
-                        <span>Б 18</span>
-                        <span>Ж 9</span>
-                        <span>У 8</span>
-                    </div>
-                    <p style="margin-bottom: 1rem; font-size: 0.9rem;">Нежный чизкейк с высоким содержанием белка и минимумом углеводов</p>
-                    <div class="price">380 ₽</div>
-                </div>
-            </div>
+  <section style="padding: 3rem 5%; background: #f5f1ed;">
+    <h2 style="font-size: 2rem; text-align: center; margin-bottom: 2rem;">Что говорят наши клиенты</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem;">
+      <div style="background: white; padding: 2rem; border-radius: 10px;">
+        <p style="margin-bottom: 1rem; line-height: 1.6; font-style: italic;">"Наконец нашла место, где можно купить десерты без чувства вины! Чизкейк просто невероятный."</p>
+        <p style="font-weight: bold; color: #c97a6e;">Анна К.</p>
+      </div>
+      <div style="background: white; padding: 2rem; border-radius: 10px;">
+        <p style="margin-bottom: 1rem; line-height: 1.6; font-style: italic;">"Отличная приправа. Беру брауни каждый день — вкусно и не вредит тренировкам."</p>
+        <p style="font-weight: bold; color: #c97a6e;">Дмитрий М.</p>
+      </div>
+      <div style="background: white; padding: 2rem; border-radius: 10px;">
+        <p style="margin-bottom: 1rem; line-height: 1.6; font-style: italic;">"Заказала доставку в офис. Коллеги в восторге! Десерты красивые и действительно полезные."</p>
+        <p style="font-weight: bold; color: #c97a6e;">Елена С.</p>
+      </div>
+    </div>
+  </section>
 
-            <div class="product">
-                <div class="product-image" style="background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);">🍫</div>
-                <div class="product-info">
-                    <div class="tags">
-                        <span class="tag">без сахара</span>
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=400');">🍫</div>                    <h3>Брауни без глютена</h3>
-                    <div class="nutrition">
-                        <span>220 ккал</span>
-                        <span>Б 6</span>
-                        <span>Ж 14</span>
-                        <span>У 18</span>
-                    </div>
-                    <p style="margin-bottom: 1rem; font-size: 0.9rem;">Шоколадный брауни на миндальной муке с насыщенным вкусом</p>
-                    <div class="price">290 ₽</div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section style="padding: 2rem 5%; background: white; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
+    <div style="background: #f9f7f4; padding: 2rem; border-radius: 10px;">
+      <h3 style="font-size: 1.3rem; margin-bottom: 1rem;">⏰ Режим работы</h3>
+      <p style="font-size: 1rem;"><strong>Ежедневно 08:00–22:00</strong></p>
+    </div>
+    <div style="background: #f9f7f4; padding: 2rem; border-radius: 10px;">
+      <h3 style="font-size: 1.3rem; margin-bottom: 1rem;">📍 Адрес</h3>
+      <p style="font-size: 1rem;">г. Москва, ул. Примерная, д. 10</p>
+      <a href="#" style="display: inline-block; background: #c97a6e; color: white; padding: 0.5rem 1rem; margin-top: 1rem; border-radius: 5px; text-decoration: none;">Показать на карте</a>
+    </div>
+  </section>
 
-    <footer id="contacts">
-        <div class="contact-info">
-            <h3 style="margin-bottom: 1rem;">Контакты</h3>
-            <p>📍 г. Москва, ул. Примерная, д. 1</p>
-            <p>📞 +7 (926) 258-38-98</p>
-            <p>🕐 Ежедневно с 08:00 до 22:00</p>
-        </div>
-        <p>© 2024 Кофе ПП. Все права защищены.</p>
-    </footer>
+  <footer style="background: #333; color: white; padding: 3rem 5%;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+      <div>
+        <h4 style="margin-bottom: 1rem;">☕ Clean Cake</h4>
+        <p style="font-size: 0.95rem; color: #999;">Вкусные и полезные десерты для вашего здоровья и хорошего настроения</p>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 1rem;">Навигация</h4>
+        <ul style="list-style: none;">
+          <li style="margin-bottom: 0.5rem;"><a href="#" style="color: #999; text-decoration: none;">Главная</a></li>
+          <li style="margin-bottom: 0.5rem;"><a href="#" style="color: #999; text-decoration: none;">Меню</a></li>
+          <li style="margin-bottom: 0.5rem;"><a href="#" style="color: #999; text-decoration: none;">Доставка</a></li>
+          <li><a href="#" style="color: #999; text-decoration: none;">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 1rem;">Информация</h4>
+        <ul style="list-style: none;">
+          <li style="margin-bottom: 0.5rem;"><a href="#" style="color: #999; text-decoration: none;">Политика конфиденциальности</a></li>
+          <li style="margin-bottom: 0.5rem;"><a href="#" style="color: #999; text-decoration: none;">Пользовательское соглашение</a></li>
+          <li><a href="#" style="color: #999; text-decoration: none;">Согласие на обработку ПДн</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 1rem;">Мы в соцсетях</h4>
+        <p style="font-size: 0.95rem; color: #999;">📱 Instagram | 💬 Telegram | 🤝 VK</p>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #555;">
+      <p style="font-size: 0.9rem; color: #999;">© 2024 Clean Cake. Все права защищены.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
