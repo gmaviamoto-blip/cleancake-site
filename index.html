@@ -23,6 +23,7 @@
     .features { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; padding: 3rem 5%; background: white; }
     .feature { padding: 2rem; text-align: center; background: #f9f7f4; border-radius: 10px; }
     .feature h3 { margin: 1rem 0 0.5rem; }
+    .feature img { width: 40px; height: 40px; margin-bottom: 1rem; }
     .products { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; padding: 2rem 5%; }
     .product { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
     .product-image { width: 100%; height: 200px; background: #e8e1d9; }
@@ -31,6 +32,18 @@
     .product-title { font-weight: bold; margin-bottom: 0.5rem; }
     .product-kcal { color: #c97a6e; font-weight: bold; font-size: 0.9rem; }
     .product-price { font-size: 1.2rem; font-weight: bold; margin-top: 1rem; }
+    h2 { margin-top: 2rem; margin-bottom: 1rem; padding: 0 5%; }
+    .about { padding: 2rem 5%; background: white; margin: 2rem 0; }
+    .testimonials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; padding: 2rem 5%; }
+    .testimonial { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .testimonial p { font-size: 0.95rem; margin-bottom: 1rem; font-style: italic; }
+    .testimonial .author { font-weight: bold; color: #c97a6e; }
+    footer { background: #333; color: white; padding: 2rem 5%; margin-top: 2rem; }
+    .footer-section { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-bottom: 2rem; }
+    .footer-section h4 { margin-bottom: 1rem; }
+    .footer-section ul { list-style: none; }
+    .footer-section a { color: #999; text-decoration: none; margin-bottom: 0.5rem; }
+    .footer-section a:hover { color: white; }
   </style>
 </head>
 <body>
@@ -54,38 +67,39 @@
       <a href="#" class="btn">Меню</a>
     </div>
     <div class="hero-image">
-      <img src="https://images.unsplash.com/photo-1568081180?w=500" alt="Десерты">
+      <img src="https://images.unsplash.com/photo-1568081180807?w=500" alt="Десерты">
     </div>
   </section>
 
   <section class="features">
     <div class="feature">
-      <div style="font-size: 2.5rem;">✓</div>
+      <img src="https://images.unsplash.com/icons/checkmark" alt="Натуральные ингредиенты"> 
       <h3>Натуральные ингредиенты</h3>
       <p>Только проверенные продукты без искусственных добавок</p>
     </div>
     <div class="feature">
-      <div style="font-size: 2.5rem;">📊</div>
+      <img src="https://images.unsplash.com/icons/chart" alt="КБЖУ на каждый десерт">
       <h3>КБЖУ на каждый десерт</h3>
       <p>Полная информация о калориях, белках, жирах и углеводах</p>
     </div>
     <div class="feature">
-      <div style="font-size: 2.5rem;">🚚</div>
+      <img src="https://images.unsplash.com/icons/delivery" alt="Быстрая доставка">
       <h3>Быстрая доставка</h3>
       <p>30-90 минут в пределах МКАД</p>
     </div>
     <div class="feature">
-      <div style="font-size: 2.5rem;">📦</div>
+      <img src="https://images.unsplash.com/icons/package" alt="Только в наличии">
       <h3>Только в наличии</h3>
       <p>Показываем только доступные позиции</p>
     </div>
   </section>
 
-  <h2 style="font-size: 2rem; text-align: center; margin: 3rem 0;">Популярные позиции</h2>
-  
-  <section class="products">
+  <h2>Популярные позиции</h2>
+  <div class="products">
     <div class="product">
-      <div class="product-image"><img src="https://images.unsplash.com/photo-1535920527894-b400b62fe660?w=400" alt="Черничный чизкейк"></div>
+      <div class="product-image">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=300" alt="Черничный чизкейк">
+      </div>
       <div class="product-info">
         <div class="product-title">Черничный чизкейк</div>
         <div class="product-kcal">180 ккал</div>
@@ -94,7 +108,9 @@
       </div>
     </div>
     <div class="product">
-      <div class="product-image"><img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=400" alt="Шоколадный брауни"></div>
+      <div class="product-image">
+        <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=300" alt="Шоколадный брауни">
+      </div>
       <div class="product-info">
         <div class="product-title">Шоколадный брауни</div>
         <div class="product-kcal">220 ккал</div>
@@ -103,7 +119,9 @@
       </div>
     </div>
     <div class="product">
-      <div class="product-image"><img src="https://images.unsplash.com/photo-z1W2v1JWbKU?w=400" alt="Ягодный тарт"></div>
+      <div class="product-image">
+        <img src="https://images.unsplash.com/photo-1587080195348-2c8f084aadb4?w=300" alt="Ягодный тарт">
+      </div>
       <div class="product-info">
         <div class="product-title">Ягодный тарт</div>
         <div class="product-kcal">195 ккал</div>
@@ -112,7 +130,9 @@
       </div>
     </div>
     <div class="product">
-      <div class="product-image"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400" alt="Латте"></div>
+      <div class="product-image">
+        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=300" alt="Латте с овсяным молоком">
+      </div>
       <div class="product-info">
         <div class="product-title">Латте с овсяным молоком</div>
         <div class="product-kcal">110 ккал</div>
@@ -120,84 +140,62 @@
         <div class="product-price">240 ₽</div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section style="padding: 3rem 5%; background: white;">
-    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">О нас</h2>
-    <div style="display: flex; gap: 2rem; align-items: center;">
-      <div style="flex: 1;">
-        <p style="margin-bottom: 1rem; line-height: 1.8;"><strong>Делаем кофе и ПП‑десерты так, чтобы было реально вкусно.</strong></p>
-        <p style="margin-bottom: 1rem; line-height: 1.8;">Всегда называет состав, КБЖУ и подсластитель. Десерты продаём из рук в руки — поэтому собираем заказ быстро.</p>
-        <p style="line-height: 1.8;">Наши кондитеры работают только на натуральных ингредиентах — цельнозерновая мука, греческий йогурт, свежие фрукты и ягоды. Никаких искусственных добавок, только польза и вкус.</p>
-      </div>
-      <div style="flex: 1;">
-        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500" alt="О нас" style="width: 100%; border-radius: 10px;">
-      </div>
-    </div>
-  </section>
+  <div class="about">
+    <h2>О нас</h2>
+    <p><strong>Делаем кофе и ПП‑десерты так, чтобы было реально вкусно.</strong></p>
+    <p>Всегда называет состав, КБЖУ и подсластитель. Десерты продаём из рук в руки — поэтому собираем заказ быстро.</p>
+    <p>Наши кондитеры работают только на натуральных ингредиентах — цельнозерновая мука, греческий йогурт, свежие фрукты и ягоды. Никаких искусственных добавок, только польза и вкус.</p>
+  </div>
 
-  <section style="padding: 3rem 5%; background: #f5f1ed;">
-    <h2 style="font-size: 2rem; text-align: center; margin-bottom: 2rem;">Что говорят наши клиенты</h2>
-    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem;">
-      <div style="background: white; padding: 2rem; border-radius: 10px;">
-        <p style="margin-bottom: 1rem; line-height: 1.6; font-style: italic;">"Наконец нашла место, где можно купить десерты без чувства вины! Чизкейк просто невероятный."</p>
-        <p style="font-weight: bold; color: #c97a6e;">Анна К.</p>
-      </div>
-      <div style="background: white; padding: 2rem; border-radius: 10px;">
-        <p style="margin-bottom: 1rem; line-height: 1.6; font-style: italic;">"Отличная приправа. Беру брауни каждый день — вкусно и не вредит тренировкам."</p>
-        <p style="font-weight: bold; color: #c97a6e;">Дмитрий М.</p>
-      </div>
-      <div style="background: white; padding: 2rem; border-radius: 10px;">
-        <p style="margin-bottom: 1rem; line-height: 1.6; font-style: italic;">"Заказала доставку в офис. Коллеги в восторге! Десерты красивые и действительно полезные."</p>
-        <p style="font-weight: bold; color: #c97a6e;">Елена С.</p>
-      </div>
+  <h2>Что говорят наши клиенты</h2>
+  <div class="testimonials">
+    <div class="testimonial">
+      <p>"Наконец нашла место, где можно купить десерты без чувства вины! Чизкейк просто невероятный."</p>
+      <div class="author">Анна К.</div>
     </div>
-  </section>
+    <div class="testimonial">
+      <p>"Отличная приправа. Беру брауни каждый день — вкусно и не вредит тренировкам."</p>
+      <div class="author">Дмитрий М.</div>
+    </div>
+    <div class="testimonial">
+      <p>"Заказала доставку в офис. Коллеги в восторге! Десерты красивые и действительно полезные."</p>
+      <div class="author">Елена С.</div>
+    </div>
+  </div>
 
-  <section style="padding: 2rem 5%; background: white; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
-    <div style="background: #f9f7f4; padding: 2rem; border-radius: 10px;">
-      <h3 style="font-size: 1.3rem; margin-bottom: 1rem;">⏰ Режим работы</h3>
-      <p style="font-size: 1rem;"><strong>Ежедневно 08:00–22:00</strong></p>
-    </div>
-    <div style="background: #f9f7f4; padding: 2rem; border-radius: 10px;">
-      <h3 style="font-size: 1.3rem; margin-bottom: 1rem;">📍 Адрес</h3>
-      <p style="font-size: 1rem;">г. Москва, ул. Примерная, д. 10</p>
-      <a href="#" style="display: inline-block; background: #c97a6e; color: white; padding: 0.5rem 1rem; margin-top: 1rem; border-radius: 5px; text-decoration: none;">Показать на карте</a>
-    </div>
-  </section>
-
-  <footer style="background: #333; color: white; padding: 3rem 5%;">
-    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+  <footer>
+    <div class="footer-section">
       <div>
-        <h4 style="margin-bottom: 1rem;">☕ Clean Cake</h4>
-        <p style="font-size: 0.95rem; color: #999;">Вкусные и полезные десерты для вашего здоровья и хорошего настроения</p>
+        <h4>☕ Clean Cake</h4>
+        <p>Вкусные и полезные десерты для вашего здоровья и хорошего настроения</p>
       </div>
       <div>
-        <h4 style="margin-bottom: 1rem;">Навигация</h4>
-        <ul style="list-style: none;">
-          <li style="margin-bottom: 0.5rem;"><a href="#" style="color: #999; text-decoration: none;">Главная</a></li>
-          <li style="margin-bottom: 0.5rem;"><a href="#" style="color: #999; text-decoration: none;">Меню</a></li>
-          <li style="margin-bottom: 0.5rem;"><a href="#" style="color: #999; text-decoration: none;">Доставка</a></li>
-          <li><a href="#" style="color: #999; text-decoration: none;">Контакты</a></li>
+        <h4>Навигация</h4>
+        <ul>
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Меню</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Контакты</a></li>
         </ul>
       </div>
       <div>
-        <h4 style="margin-bottom: 1rem;">Информация</h4>
-        <ul style="list-style: none;">
-          <li style="margin-bottom: 0.5rem;"><a href="#" style="color: #999; text-decoration: none;">Политика конфиденциальности</a></li>
-          <li style="margin-bottom: 0.5rem;"><a href="#" style="color: #999; text-decoration: none;">Пользовательское соглашение</a></li>
-          <li><a href="#" style="color: #999; text-decoration: none;">Согласие на обработку ПДн</a></li>
+        <h4>Информация</h4>
+        <ul>
+          <li><a href="#">Политика конфиденциальности</a></li>
+          <li><a href="#">Пользовательское соглашение</a></li>
+          <li><a href="#">Согласие на обработку ПДн</a></li>
         </ul>
       </div>
       <div>
-        <h4 style="margin-bottom: 1rem;">Мы в соцсетях</h4>
-        <p style="font-size: 0.95rem; color: #999;">📱 Instagram | 💬 Telegram | 🤝 VK</p>
+        <h4>Мы в соцсетях</h4>
+        <p>📱 Instagram | 💬 Telegram | 🤝 VK</p>
       </div>
     </div>
     <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #555;">
-      <p style="font-size: 0.9rem; color: #999;">© 2024 Clean Cake. Все права защищены.</p>
+      <p>© 2024 Clean Cake. Все права защищены.</p>
     </div>
   </footer>
-
 </body>
-</html>
+</html>    
