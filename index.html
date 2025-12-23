@@ -80,7 +80,7 @@ margin-bottom: 1rem;
 .hero-image {
 width: 100%;
 height: 400px;
-background: linear-gradient(135deg, #c97a6e 0%, #e9b5ad 100%);
+background: url('images/cbfb7939-978a-4ed4-8e6c-f1cfda53c5a6.jpg') center/cover;
 border-radius: 20px;
 display: flex;
 align-items: center;
@@ -140,13 +140,28 @@ box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 .product-image {
 width: 100%;
 height: 200px;
-background: linear-gradient(135deg, #f9f3e8 0%, #e9dcc8 100%);
 border-radius: 10px;
 margin-bottom: 1rem;
 display: flex;
 align-items: center;
 justify-content: center;
 color: #c97a6e;
+
+  .product-image.cheesecake {
+  background: url('images/3fd09adf-0fc3-41a1-abd9-0a5734ef5892.jpg') center/cover;
+}
+
+.product-image.brownie {
+  background: url('images/8348df95-6912-44bb-bc32-8baed1990336.jpg') center/cover;
+}
+
+.product-image.tart {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+}
+
+.product-image.latte {
+  background: url('images/83f55f3b-374a-4bca-9840-6da1e0196440.jpg') center/cover;
+}
 }
 
 .product-card h3 {
@@ -309,29 +324,24 @@ grid-template-columns: 1fr;
 <p style="text-align:center;color:#666;">Самые любимые десерты и напитки наших клиентов</p>
 <div class="products-grid">
 <div class="product-card">
-<div class="product-image">🧁 Чизкейк</div>
 <h3>Черничный чизкейк</h3>
 <p class="kcal">180 ккал</p>
 <p>Нежный творожный десерт с черникой на овсяной основе</p>
-<p class="price">350 ₽</p>
-</div>
+<div class="product-image cheesecake"></div></div>
 <div class="product-card">
-<div class="product-image">🍫 Брауни</div>
-<h3>Шоколадный брауни</h3>
+<div class="product-image brownie"></div><h3>Шоколадный брауни</h3>
 <p class="kcal">220 ккал</p>
 <p>Влажный брауни из цельнозерновой муки с горьким шоколадом</p>
 <p class="price">320 ₽</p>
 </div>
 <div class="product-card">
-<div class="product-image">🍓 Ягоды</div>
-<h3>Ягодный тарт</h3>
+<div class="product-image tart"></div><h3>Ягодный тарт</h3>
 <p class="kcal">195 ккал</p>
 <p>Хрустящее тесто с кремом из греческого йогурта и свежими ягодами</p>
 <p class="price">380 ₽</p>
 </div>
 <div class="product-card">
-<div class="product-image">☕ Латте</div>
-<h3>Латте с овсяным молоком</h3>
+<div class="product-image latte"></div><h3>Латте с овсяным молоком</h3>
 <p class="kcal">110 ккал</p>
 <p>Нежный латте на овсяном молоке без сахара</p>
 <p class="price">240 ₽</p>
